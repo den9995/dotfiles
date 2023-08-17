@@ -1,0 +1,30 @@
+window:
+  dimensions:
+    columns: 70
+    lines: 25
+  position:
+    x: 1287
+    y: 0
+  opacity: 0.7
+  title: floatterm
+  # Allow terminal applications to change Alacritty's window title.
+  #dynamic_title: true
+  # Window class (Linux/BSD only):
+  #class:
+    # Application instance name
+    #instance: Alacritty
+    # General application class
+    #general: Alacritty
+
+  # GTK theme variant (Linux/BSD only)
+  #
+  # Override the variant of the GTK theme. Commonly supported values are `dark`
+  # and `light`. Set this to `None` to use the default theme variant.
+  #
+  #gtk_theme_variant: None
+#scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  #history: 10000
+  # Scrolling distance multiplier.
+  #multiplier: 3
