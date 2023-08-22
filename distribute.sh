@@ -1,6 +1,7 @@
 #!/bin/sh
 src_dir=$(dirname "$0")
 config_dir=/home/user/.config
+set -x
 cp -r $src_dir/alacritty  $config_dir
 cp -r $src_dir/keepmenu   $config_dir
 cp -r $src_dir/lf         $config_dir

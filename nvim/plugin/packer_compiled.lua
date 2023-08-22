@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "/home/user/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["multicursors.nvim"] = {
-    loaded = true,
-    path = "/home/user/.local/share/nvim/site/pack/packer/start/multicursors.nvim",
-    url = "https://github.com/smoka7/multicursors.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/user/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -148,10 +143,23 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/user/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/user/.local/share/nvim/site/pack/packer/opt/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: vim-visual-multi
+time([[Setup for vim-visual-multi]], true)
+try_loadstring("\27LJ\2\nV\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\0\2\18Add Cursor Up\n<C-k>\20Add Cursor Down\n<C-j>\fVM_maps\6g\bvim\0", "setup", "vim-visual-multi")
+time([[Setup for vim-visual-multi]], false)
+time([[packadd for vim-visual-multi]], true)
+vim.cmd [[packadd vim-visual-multi]]
+time([[packadd for vim-visual-multi]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

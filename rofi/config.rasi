@@ -7,6 +7,8 @@ configuration {
     sort: true;
     sorting-method: "fzf";
     matching: "fuzzy";
+    //disable-history: true;
+    //normalize-match: true;
 }
 
 @theme "/dev/null"

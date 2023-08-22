@@ -4,6 +4,7 @@ set cleaner ~/.config/lf/clear_img.sh
 set previewer ~/.config/lf/previewer.sh
 set icons
 set hidden
+set incsearch
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
@@ -55,7 +56,7 @@ cmd drag &ripdrag $fx
 cmd open &{{
     case $(file --mime-type -Lb $f) in
         text/*) lf -remote "send $id \$nvim -p \$fx";;
-        application/octet-stream) lf -remote "send $id \$nvim -p \$fx";;
+        application/javascript) lf -remote "send $id \$nvim -p \$fx";;
         image/*) sxiv $fx;;
         video/*) mpv $fx;;
         audio/*) mpv $fx;;

@@ -32,13 +32,13 @@ import subprocess
 
 mod = "mod4"
 alt = "mod1"
-green = "#005500"
-vgreen = "#20DF20"
+darkGreen = "#005500"
+green = "#20DF20"
 black = "#181818"
 gray = "#555555"
 white = "#ffffff"
 red = "#ff0000"
-border_focus=vgreen;
+border_focus=green;
 border_width=2
 margin=2
 terminal = "alacritty" #guess_terminal()
@@ -139,7 +139,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus=border_focus,border_normal=green, border_width=border_width, margin = margin),
+    layout.Columns(border_focus=border_focus,border_normal=darkGreen, border_width=border_width, margin = margin),
     layout.Max(border_focus=border_focus, border_width=0),
     # Try more layouts by unleashing below layouts.
     #layout.Spiral(border_focus=border_focus, border_width=border_width),
@@ -156,8 +156,8 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.GroupBox(background=gray,highlight_method='block',active=vgreen,inactive=white,this_current_screen_border=green,this_screen_border=green,disable_drag=True),
-                widget.CurrentLayoutIcon(background=green),
+                widget.GroupBox(background=gray,highlight_method='block',active=green,inactive=white,this_current_screen_border=darkGreen,this_screen_border=darkGreen,disable_drag=True),
+                widget.CurrentLayoutIcon(background=darkGreen),
                 widget.Sep(background=gray),
                 widget.WindowName(),
                 widget.Sep(background=gray),
@@ -168,9 +168,9 @@ screens = [
                 widget.Clock(format="%T %a %d-%B (%m)-%Y",background=gray),
             ],
             24,
-            border_width=[0, 0, border_width, 0],  # Draw top and bottom borders
-            border_color=["000000", "000000", "005500", "000000"],  # Borders are magenta
-            background=green,
+            border_width=[0, 0, border_width, 0],  
+            border_color=[green, green, darkGreen, green],  
+            background=darkGreen,
             margin=[border_width-margin,0,-border_width,0],
         ),
         top=bar.Gap(-margin),

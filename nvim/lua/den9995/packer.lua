@@ -2,8 +2,16 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
-    use("smoka7/multicursors.nvim")
     use 'wbthomason/packer.nvim'
+    use {
+        'mg979/vim-visual-multi',
+        setup = function()
+            vim.g.VM_maps = {
+                ["Add Cursor Down"] = '<C-j>',
+                ["Add Cursor Up"] = '<C-k>',
+            }
+        end,
+    }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         -- or                            , branch = '0.1.x',

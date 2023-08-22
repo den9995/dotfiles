@@ -50,7 +50,8 @@ if [ -n "$FIFO_UEBERZUG" ]; then
       ffmpeg -y -i "$file" -vframes 1 "$cache"
       draw "$cache" "$@"
       ;;
-    application/octet-stream) sed "s/\x0/ _ /" "$file" ;;
+    application/octet-stream) sed "s/\x0/ ^@ /g" "$file" ;;
+    application/javascript) cat "$file" ;;
     application/*) 7z l -ba "$file" | perl -ne 'my @a = split / +/; for my $i (5 .. $#a){ print "$a[$i] "};' ;;
     *) cat "$file" ;;
   esac
